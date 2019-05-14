@@ -10,25 +10,24 @@ objFileToWrite.Close
 objFileToWrite2.Close
 '*****************************************************
 
+'************We prepare a WMI object and get the full charged capacity
+Set objWMIService = GetObject("winmgmts:\\.\root\WMI")
+
+Set colItems = objWMIService.ExecQuery("Select * From BatteryFullChargedCapacity")
+For Each objItem In colItems
+	Full = objItem.FullChargedCapacity
+Next
+					
 '******************************* The process is repeated to register the battery changes as your laoptop discharges.
 While (1)
 
-	Set objWMIService = GetObject("winmgmts:\\.\root\WMI")
-
-	'************The ExecQuery method returns an object containing normally one
-	Set colItems = objWMIService.ExecQuery("Select * From BatteryStatus")
-
+	Set colItems = objWMIService.ExecQuery("Select * From BatteryStatus")	
 	For Each objItem In colItems
 		If objItem.RemainingCapacity > 0 Then
 			remaining = objItem.RemainingCapacity
 		End If
 	Next
-
-	Set colItems = objWMIService.ExecQuery("Select * From BatteryFullChargedCapacity")
-
-	For Each objItem In colItems
-		Full = objItem.FullChargedCapacity
-	Next
+	
 
 	iPercent = ((remaining / Full) * 100) Mod 100
 
