@@ -1,7 +1,7 @@
 # Scripting
 Scripts in different languages...
 
-*********************************************First Project: Battery status Scan and Alert ************************************************
+******************************************First Project: Battery status Scan and Alert ************************************************
 
 This project targets the problem that raises on laptops when Windows has lost the hability to let you know when your laptop's battery is about to run low. The script "battery - life status" is a separate tool to run a quick health check of your battery. As for the other two scripts, here is how to use them:
 
