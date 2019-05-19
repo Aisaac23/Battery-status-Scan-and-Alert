@@ -1,7 +1,7 @@
 # Scripting
 Scripts in different languages...
 
-******************************************First Project: Battery status Scan and Alert ************************************************
+********************First Project: Battery status Scan and Alert ************************************************
 
 This project targets the problem that raises on laptops when Windows has lost the hability to let you know when your laptop's battery is about to run low. The script "battery - life status" is a separate tool to run a quick health check of your battery. As for the other two scripts, here is how to use them:
 
@@ -11,4 +11,4 @@ This project targets the problem that raises on laptops when Windows has lost th
 4.- Do something like web-surfing as you let your laptop uncharge until it shuts down.
 5.- Plug your charger back in, turn on your laptop, run the "battery - status - Alert" script and follow the instructions at the end of it so Windows can run it automatically everytime you start Windows.
 
-******************************************************************************************************************************************
+******************************************************************************************************************
